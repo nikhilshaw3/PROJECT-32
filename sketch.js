@@ -58,9 +58,9 @@ sling = new Sling(poly.body, { x: 200, y: 250 })
 }
 
 function draw(){
-  if(backgroundImg)
+  if(backgroundImg){
     background(backgroundImg);
-
+  }
   Engine.update(engine);
 
 textSize(30);
@@ -133,7 +133,7 @@ function mouseDragged() {
     }
 
     async function getbackgroundImg(){
-      var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+      var response = await fetch("http://worldclockapi.com/api/json/est/now");
       var responseJSON = await response.json();
       
       var datetime = responseJSON.datetime;
