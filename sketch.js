@@ -58,13 +58,10 @@ sling = new Sling(poly.body, { x: 200, y: 250 })
 }
 
 function draw(){
-  if(backgroundImg){
+  if(backgroundImg)
     background(backgroundImg);
- }
 
-
-
-Engine.update(engine);
+  Engine.update(engine);
 
 textSize(30);
 fill("lightyellow");
